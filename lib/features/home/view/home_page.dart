@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_themes/common/constants/container_width.dart';
+import 'package:flutter_themes/common/theme/primary_color_switcher.dart';
 import 'package:flutter_themes/common/theme/theme_switcher.dart';
 
 class HomePage extends StatelessWidget {
@@ -30,6 +31,7 @@ class HomePage extends StatelessWidget {
                 padding: EdgeInsets.symmetric(vertical: 10),
                 child: Text('Primary Color'),
               ),
+              const PrimaryColorSwitcher()
             ],
           ),
         ),

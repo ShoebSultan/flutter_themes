@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_themes/common/theme/app_colors.dart';
 import 'package:flutter_themes/common/theme/theme_provider.dart';
 import 'package:flutter_themes/features/home/view/home_page.dart';
 import 'package:provider/provider.dart';
@@ -20,9 +21,18 @@ class MyApp extends StatelessWidget {
         child: const HomePage(),
         builder: (c, themeProvider, child) {
           return MaterialApp(
-            /*  theme: ThemeData(
+            theme: ThemeData(
               brightness: Brightness.light,
-            ), */
+              primaryColor: themeProvider.selectedPrimaryColor,
+              primarySwatch: AppColors.getMaterialColorFromColor(
+                  themeProvider.selectedPrimaryColor),
+            ),
+            darkTheme: ThemeData(
+              brightness: Brightness.dark,
+              primaryColor: themeProvider.selectedPrimaryColor,
+              primarySwatch: AppColors.getMaterialColorFromColor(
+                  themeProvider.selectedPrimaryColor),
+            ),
             debugShowCheckedModeBanner: false,
             themeMode: themeProvider.selectedThemeMode,
             home: child,

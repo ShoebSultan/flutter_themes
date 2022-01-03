@@ -32,6 +32,7 @@ class ThemeSwitcher extends StatelessWidget {
                   color: _isSelectedTheme
                       ? Theme.of(context).primaryColor
                       : Colors.transparent,
+                  image: AppTheme.appThemes[index].image,
                   borderRadius: BorderRadius.circular(10),
                   border: Border.all(
                     width: 2,
